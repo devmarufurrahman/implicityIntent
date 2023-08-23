@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         btnMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri uri = Uri.parse("smsto:"+ Uri.encode("+8801795636348"));
+                Uri uri = Uri.parse("smsto:"+ Uri.encode("+8801757474700"));
                 Intent iMsg = new Intent(Intent.ACTION_SENDTO,uri);
 
                 iMsg.putExtra("sms_body","Please solve the issue asap.");
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent iEmail = new Intent(Intent.ACTION_SEND);
                 iEmail.setType("message/rfc822");
-                iEmail.putExtra(Intent.EXTRA_EMAIL, new String[]{"mdmarufur5682@gmail.com","mr.noman700@gmail.com"});
+                iEmail.putExtra(Intent.EXTRA_EMAIL, new String[]{"mdmarufur5682@gmail.com","vangaradio5682@gmail.com"});
                 iEmail.putExtra(Intent.EXTRA_SUBJECT,"Test");
                 iEmail.putExtra(Intent.EXTRA_TEXT,"Please solve this problem");
                 startActivity(Intent.createChooser(iEmail,"Email via"));
